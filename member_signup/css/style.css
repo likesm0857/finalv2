@@ -1,0 +1,92 @@
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+  background-image: url(../img/4.png);
+  background-size：cover
+}
+
+a, h1, h2, h3, h4, h5, h6, label {
+  font-family: "微軟正黑體";
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.ilike-blue-container {
+  @extend .light-blue, .text-lighten-4;
+}
+
+.row2 {
+  float: left;
+}
+
+.logo img {
+  width: 30%;
+  height: 20%;
+}
+
+.uu {
+  height: 1%;
+}
+
+.u2 {
+  height: 3%;
+}
+
+.container {
+  padding: 60px;
+}
+
+.hambuger_menu_icon {
+  background-color: rgb(36, 180, 100);
+  width: 50px;
+  height: 5px;
+  margin: 10px;
+  display: block;
+}
+
+.hambuger_menu:hover .hambuger_menu_icon {
+  transition: 1s;
+  transform: rotate(180deg);
+  transform-origin: 0 15;
+}
+
+@media screen and (max-width:1980px) {
+  .rwd h5 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:490px) {
+  .rwd h5 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .rwd h5 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:321px) {
+  .rwd h5 {
+    font-size: 12px;
+  }
+  .rwd {
+    font-size: 8px;
+  }
+}
