@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>A2 ALARM | Pollution</title>
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <!-- jQuery/bootstrap -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body class="kaohsiung1">
+  <img id="goTop" src="img/back_to_top.png" title="Back to Top" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 漢堡選單 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/LOGO.png" alt="A2 ALARM">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse rwd_background" id="bs-example-navbar-collapse-1">
+        <a href="#"><img class="nav-button button-left" src="img/button_north.png" alt="north"></a>
+        <a href="#"><img class="nav-button button-mid" src="img/button_mid.png" alt="mid"></a>
+        <a href="#"><img class="nav-button button-right" src="img/button_south.png" alt="south"></a>
+
+        <ul class="nav navbar-nav navbar-right rwd_menu">
+          <li><a id="loginOut" href="#">登出</a></li>
+          <li><a id="joinUs" href="#">加入我們</a></li>
+          <li><a id="welcome" href="#">會員登入</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a class="menu_cotain no_img" href="../index.html"><img src="img/menu_icon.png" alt="">回到首頁</a></li>
+          <li><a class="menu_cotain" href="pollution_taipei.html"><img src="img/button_north.png" alt="">汽機車汙染</a></li>
+          <li><a class="menu_cotain" href="pollution_taichung.html"><img src="img/button_mid.png" alt="">火力發電廠</a></li>
+          <li><a class="menu_cotain" href="pollution_yunlin.html"><img src="img/button_mid.png" alt="">六輕工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung1.html"><img src="img/button_south.png" alt="">小港工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung2.html"><img src="img/button_south.png" alt="">仁武工業區</a></li>
+          <li id="joinUsRWD"><a class="menu_cotain no_img" href="../member_signup/member_signup.html"><img src="img/menu_icon.png" alt="">加入我們</a></li>
+          <li><a id="welcomeRWD" class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">會員登入</a></li>
+          <li id="loginOutRWD"><a class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">登出</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse navbar-pollution">
+        <a class="north" href="pollution_taipei.html">汽機車汙染</a>
+        <a class="mid" href="pollution_taichung.html">火力發電廠</a>
+        <a class="mid" href="pollution_yunlin.html">六輕工業區</a>
+        <a class="south" href="pollution_kaohsiung1.html">小港工業區</a>
+        <a class="south" href="pollution_kaohsiung2.html">仁武工業區</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <img class="main_img" src="img/pollution_kaohsiung1.png" alt="pollution_taichung">
+    <div class="article">
+      <div class="event_information">
+        <iframe class="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Fhc_ref%3DSEARCH&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1863859253879208" width="100px"
+          height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="no_like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Ffref%3Dts&width=104&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId=1863859253879208" width="104"
+          height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 事件名稱：空氣致癌濃度小港全國最高</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 事件地點：高雄市小港區</p>
+        <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43921.9516322447!2d120.35978612142061!3d22.53591846484306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1d6a6c3dc683%3A0x589796fb8372c66b!2zODEy6auY6ZuE5biC5bCP5riv5Y2A6Ieo5rW35bel5qWt5Y2A!5e1!3m2!1szh-TW!2stw!4v1497992294921"
+          width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class="happen"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 事發狀況　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></p>
+        <div class="event_happen">
+          <p class="happen_text">
+          台灣水資源保育聯盟等團體根據環保署監測站資料，發現高市小港區空氣致癌物苯、乙苯及苯乙烯濃度，均高於雲林台西，居全國之冠，苯最高致癌風險更超過千分之一。環團直指中鋼、中油及中石化等工廠是排放源，昨向市府陳情，要求業者停工、賠償，並為大林蒲居民做流行病學調查。
+          </p>
+          <p class="happen_text">
+          環保署空保處處長謝燕儒表示，空氣致癌污染物苯、乙苯及苯乙烯濃度的監測，採樣依不同季節、方法、產業淡旺季，會有不同結果，很難進行全國比較，但願意提供高市環保局協助，一同改善當地空氣品質。
+          </p>
+          <img  class="img-thumbnail" src="img/kaohsiung1_img1.jpg">
+          <p class="happen_text">
+          黃安調表示，環保署位於小港國中的光化測站，高市小港區測到的苯、乙苯及苯乙烯三項污染物濃度，均高於雲林台西（台塑六輕所在地）測值，以三項致癌物計算致癌風險，小港平均致癌風險及最大致癌風險，均為雲林台西的三到五倍，最大致癌風險高於萬分之一，已超過百萬分之一，明顯逾越可接受範圍。
+          </p>
+          <p class="happen_text">
+          邱春華說，根據環保單位資料，中鋼、中油大林廠、中石化小港廠等都是苯的排放來源，尤其中鋼的排放量最多，環保署應要求這些工廠降低污染量，並進行流行病學調查，還大林蒲居民健康的生活環境。
+          </p>
+        </div><!-- event_happen -->
+        <p class="result"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 調查結果　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+        <div class="event_result">
+          <p class="result_text">
+            位於鳳鼻頭的龍鳳里長黃文裕表示，他不贊成遷村，而應是要遷廠，當地居民與這塊土地已有感情，鳳鼻頭、大林蒲是先有居民後來才設廠，遷村豈不變成乞丐趕廟公，當地在未設廠前的空氣還很好，是政府招商設廠後，空氣品質才變差，因此他強調應遷廠而非遷村。
+          </p>
+          <p class="result_text">
+            位於大林蒲的鳳森里長陳清水指出，他瞭解的里民是傾向不遷村的比較多，包括中下經濟弱勢住民。現在是要遷村的講話比較大聲，主張要遷村的，很多人早已搬到草衙、二苓等外地，他們在鳳鼻頭祇保留祖宅與戶籍，等著領補償費。
+          </p>
+          <p class="result_text">
+            有些主張遷村的人，用的是早年的汙染數據，其實現在大林蒲地區環保事件變少了，工廠汙染情況都有改善，另外，遷村要中央說了才算數，市府也無權談遷村，更不是一小撮人說遷就能遷。
+          </p>
+        </div>
+      </div>
+      <!-- event_information -->
+    </div>
+    <!-- article -->
+  </div>
+  <!-- container -->
+
+  <footer>
+    <p> © copyright 2016 </p>
+    <div class="icon">
+      <a href="#"><img src="img/btn_fb.png"></a>
+      <a href="#"><img src="img/btn_tw.png"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

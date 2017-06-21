@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>A2 ALARM | Pollution</title>
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <!-- jQuery/bootstrap -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body class="kaohsiung2">
+  <img id="goTop" src="img/back_to_top.png" title="Back to Top" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 漢堡選單 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/LOGO.png" alt="A2 ALARM">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse rwd_background" id="bs-example-navbar-collapse-1">
+        <a href="#"><img class="nav-button button-left" src="img/button_north.png" alt="north"></a>
+        <a href="#"><img class="nav-button button-mid" src="img/button_mid.png" alt="mid"></a>
+        <a href="#"><img class="nav-button button-right" src="img/button_south.png" alt="south"></a>
+
+        <ul class="nav navbar-nav navbar-right rwd_menu">
+          <li><a id="loginOut" href="#">登出</a></li>
+          <li><a id="joinUs" href="#">加入我們</a></li>
+          <li><a id="welcome" href="#">會員登入</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a class="menu_cotain no_img" href="../index.html"><img src="img/menu_icon.png" alt="">回到首頁</a></li>
+          <li><a class="menu_cotain" href="pollution_taipei.html"><img src="img/button_north.png" alt="">汽機車汙染</a></li>
+          <li><a class="menu_cotain" href="pollution_taichung.html"><img src="img/button_mid.png" alt="">火力發電廠</a></li>
+          <li><a class="menu_cotain" href="pollution_yunlin.html"><img src="img/button_mid.png" alt="">六輕工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung1.html"><img src="img/button_south.png" alt="">小港工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung2.html"><img src="img/button_south.png" alt="">仁武工業區</a></li>
+          <li id="joinUsRWD"><a class="menu_cotain no_img" href="../member_signup/member_signup.html"><img src="img/menu_icon.png" alt="">加入我們</a></li>
+          <li><a id="welcomeRWD" class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">會員登入</a></li>
+          <li id="loginOutRWD"><a class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">登出</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse navbar-pollution">
+        <a class="north" href="pollution_taipei.html">汽機車汙染</a>
+        <a class="mid" href="pollution_taichung.html">火力發電廠</a>
+        <a class="mid" href="pollution_yunlin.html">六輕工業區</a>
+        <a class="south" href="pollution_kaohsiung1.html">小港工業區</a>
+        <a class="south" href="pollution_kaohsiung2.html">仁武工業區</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <img class="main_img" src="img/pollution_kaohsiung2.png" alt="pollution_taichung">
+    <div class="article">
+      <div class="event_information">
+        <iframe class="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Fhc_ref%3DSEARCH&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1863859253879208" width="100px"
+          height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="no_like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Ffref%3Dts&width=104&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId=1863859253879208" width="104"
+          height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 事件名稱：仁大工業區空污致癌</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 事件地點：高雄市仁武區</p>
+        <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39992.964102139405!2d120.32195388383566!3d22.712767207225152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fd9d8aa7ac3%3A0xd01c88361bb3ac15!2z57aT5r-f6YOo5bel5qWt5bGA5LuB5aSn5bel5qWt5Y2A5pyN5YuZ5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1497993602609"
+          width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class="happen"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 事發狀況　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></p>
+        <div class="event_happen">
+          <p class="happen_text">
+          工業局委託成大環境微量毒物研究中心執行的健康風險評估計畫結果出爐，仁武、大社、楠梓、左營四區，致癌風險超標，逾一般可受風險的百萬分之一，敏感孩童更逾萬分之一，是一般的百倍以上，環保團體疾呼開發單位應提可行風險管理策略。
+          </p>
+          <p class="happen_text">
+          這項健康風險評估近期陸續在左營、楠梓、仁武、大社四個區公所舉行說明會，市議員張豐藤表示，報告不能只是歸檔上架，應該將結果納入風險管理計畫中。 報告指出，仁大工業區對四個區致癌風險都超過百萬分之一，仁武、大社、楠梓等地更是一般可承受風險的十七至四十五倍，對孩童敏感族群致癌風險更超過萬分之一，也就是比一般風險增加百倍以上。
+          </p>
+          <p class="happen_text">
+          曾擔任環保局長的市議員張豐藤表示，民國一○七年仁大工業區將降編為乙種工業區，但卻無法讓這些工廠停工，仍能讓這些廠商運用殘值繼續污染賺錢，對市民非常不公，應該以這個風險評估為基準，能夠降低一定幅度健康風險的製程更新才能夠核准。
+          </p>
+          <img  class="img-thumbnail" src="img/kaohsiung2_img1.jpg">
+          <p class="happen_text">
+          這項健康風險評估近期陸續在左營、楠梓、仁武、大社四個區公所舉行說明會，市議員張豐藤表示，報告不能只是歸檔上架，應該將結果納入風險管理計畫中。王敏玲表示，完整的評估報告應該在網路上資訊公開，讓更多的市民了解，且說明會的呈現也應該淺顯易懂，才能達到與市民風險溝通的目的。
+          </p>
+        </div><!-- event_happen -->
+        <p class="result"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 調查結果　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+        <div class="event_result">
+          <p class="result_text">
+            市府環保局表示，將針對報告提出的四種物質，做為污染源的評估基礎，揪出污染工廠在哪裡；市府也將與工業局合作，針對污染超過標準的工廠，對於所產生的污染物，要求降到可接受的標準之下，確保民眾生命安全。
+          </p>
+          <p class="result_text">
+            仁大工業區服務中心主任鄭雅升指出，報告數據顯示的致癌風險，對業者而言，有改善空間，將會配合政府政策；大社區三奶里長許丁春說，希望政府能夠專業把關，揪出污染超標的工廠，要求減少排放量，維護居民身體健康。
+          </p>
+          <p class="result_text">
+            大社里長林英陸表示，工業區造成空氣污染嚴重，地方陳情要求遷走，連他的親姪子才四十多歲，竟因罹患肺癌往生，令家人不能接受，既然工業局數據明確，工業區對居民健康有危害，政府應拿出魄力，要求工業區遷走，維護民眾生命安全。
+          </p>
+        </div>
+      </div>
+      <!-- event_information -->
+    </div>
+    <!-- article -->
+  </div>
+  <!-- container -->
+
+  <footer>
+    <p> © copyright 2016 </p>
+    <div class="icon">
+      <a href="#"><img src="img/btn_fb.png"></a>
+      <a href="#"><img src="img/btn_tw.png"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

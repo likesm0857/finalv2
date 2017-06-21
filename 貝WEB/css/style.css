@@ -1,0 +1,367 @@
+*  {
+   font-family: "微軟正黑體";
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.yunlin {
+  background-image: url("../img/background_yunlin.png");
+}
+
+.taipei {
+  background-image: url("../img/background_taipei.png");
+}
+
+.taichung {
+  background-image: url("../img/background_taichung.png");
+}
+
+.kaohsiung1 {
+  background-image: url("../img/background_kaohsiung1.png");
+}
+
+.kaohsiung2 {
+  background-image: url("../img/background_kaohsiung2.png");
+}
+
+#goTop {
+  position: fixed;
+  bottom: 15%; /* 與下方的距離, 也可改為百分比, 即為距離螢幕下方的百分比 */
+  right: 3%; /* 與右方的距離 */
+  width: 50px; /* 按鈕原始寬度 */
+  height: 50px; /* 按鈕原始高度 */
+  opacity: 0.6; /* 按鈕原始透明度 */
+  z-index: 10;
+  cursor: pointer;
+  transition: all .5s; /* 動畫效果 持續期間 */
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+}
+
+#goTop:hover { /* 滑鼠經過按鈕時 */
+  opacity: 1; /* 透明度 */
+  width: 60px; /* 按鈕寬度 */
+  height: 60px; /* 按鈕高度 */
+}
+
+/*NAVBAR*/
+.navbar-inverse {
+  opacity:0.7;
+}
+
+.container-fluid {
+  height: 120px;
+  /*padding: 0 10%;*/
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-brand {
+  width: 200px;
+}
+
+
+.navbar-collapse {
+  text-align:center;
+}
+
+.nav-button {
+  width: 60px;
+  margin: 15px 15px;
+}
+
+.navbar-right {
+  margin-top: 5px;
+}
+
+.north,
+.mid,
+.south
+{
+  display: none;
+}
+
+.navbar-pollution  a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+  color: rgb(242, 242, 242);
+}
+
+.navbar-pollution  a:hover {
+  background-color: rgb(242, 242, 242);
+  color: rgb(59, 56, 56);
+  font-weight: bold;
+}
+
+/*MAIN_AREA*/
+.main_img,
+.article
+{
+  width: 100%;
+}
+
+.article {
+  background-color: rgb(219, 219, 219);
+}
+
+.like {
+  float: right;
+  width: 218px;
+  padding-top: 20px;
+}
+.no_like
+{
+  float: right;
+  width: 129px;
+  padding-top: 20px;
+  display: none;
+}
+.event_information {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 100px;
+}
+
+.event_information p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.google_map {
+  width: 100%;
+}
+
+.happen,
+.result {
+  cursor: pointer;
+}
+
+.event_happen,
+.event_result {
+  background-color: rgb(240, 240, 240);
+  padding: 2%;
+  border-radius: 5px;
+  display: none;
+}
+
+.event_happen {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  padding: 2%;
+  border-radius: 5px;
+  display: none;
+}
+
+.happen_text {
+  /*width: 80%;*/
+  line-height: 150%;
+  text-align: justify;
+}
+
+.event_happen img {
+  width: 80%;
+  /*border: 1px solid #333;*/
+}
+
+/*FOOTER*/
+footer {
+  height: 80px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  background-color: rgb(45, 50, 29);
+}
+
+footer p {
+  color: rgb(240, 240, 240);
+  margin: 0;
+  font-family: "Microsoft Sans Serif";
+  font-size: 14px;
+}
+
+.icon img {
+  width: 40px;
+  margin: 0 10px;
+  margin-top: -35px;
+}
+
+.icon img:hover
+{
+  transition: 1s;
+  transform: rotate(360deg);
+  transform-origin: 0 5;
+  width: 50px;
+}
+
+.icon {
+  margin: 0;
+  float: right;
+  /*width: 50px;*/
+  /*height:auto;*/
+  margin-right: 10%;
+}
+.menu
+/*漢堡選單*/
+{
+  display: none;
+}
+
+@media screen and (max-width:991px)
+{
+.event_information
+{
+  margin: 0 10%;
+}
+.navbar-brand img {
+  width: 150px;
+}
+.navbar-brand
+{
+  margin-top: 10px;
+}
+}
+
+
+@media screen and (max-width:750px)
+{
+.event_information
+{
+  margin: 0 10%;
+}
+.navbar-brand img {
+  width: 130px;
+}
+.navbar-brand
+{
+  margin-top:10px;
+}
+.navbar-toggle
+{
+  margin-top: 35px;
+}
+.navbar-header
+{
+  height: 120px;
+}
+.navbar-inverse {
+  opacity:1;
+}
+.rwd_background
+{
+  background-color:rgb(34, 34, 34);
+  opacity: 1;
+}
+.nav-button
+{
+  display: none;
+}
+.rwd_menu
+/*網頁選單*/
+{
+ display: none;
+}
+.menu
+/*漢堡選單*/
+{
+  display: block;
+margin-top: 0px;
+  margin-bottom: 0px;
+}
+.menu_cotain
+{
+  border-bottom: 1px solid #101010;
+}
+.no_img img
+{
+  opacity: 0;
+}
+.menu img
+{
+  width:32px;
+  margin-right: 0.8%;
+}
+.menu a
+{
+  font-size: 18px;
+}
+.menu li:hover
+{
+  background-color: rgb(54, 54, 54);
+}
+.icon
+{
+   margin-right: 5%;
+}
+}
+
+@media screen and (max-width:650px)
+{
+.like
+{
+  display: none;
+}
+.no_like
+{
+  display: block;
+}
+}
+@media screen and (max-width:540px)
+{
+  .event_information
+  {
+    padding: 25px 0px;
+  }
+  .no_like
+  {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:450px)
+{
+  .icon
+  {
+     margin-right: 5%;
+  }
+  .icon img
+  {
+    width: 32px;
+  }
+  .icon img:hover
+  {
+    width:40px;
+  }
+  #goTop {
+    width: 40px; /* 按鈕原始寬度 */
+    height: 40px; /* 按鈕原始高度 */
+  }
+
+  #goTop:hover { /* 滑鼠經過按鈕時 */
+    width: 40px; /* 按鈕寬度 */
+    height: 40px; /* 按鈕高度 */
+  }
+
+}
+
+@media screen and (max-width:395px)
+{
+  footer p
+  {
+    font-size: 10px;
+  }
+  .icon img
+  {
+    margin-right: 3px;
+  }
+}

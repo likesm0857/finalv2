@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>A2 ALARM | Pollution</title>
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <!-- jQuery/bootstrap -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body class="taipei">
+  <img id="goTop" src="img/back_to_top.png" title="Back to Top" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 漢堡選單 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/LOGO.png" alt="A2 ALARM">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse rwd_background" id="bs-example-navbar-collapse-1">
+        <a href="#"><img class="nav-button button-left" src="img/button_north.png" alt="north"></a>
+        <a href="#"><img class="nav-button button-mid" src="img/button_mid.png" alt="mid"></a>
+        <a href="#"><img class="nav-button button-right" src="img/button_south.png" alt="south"></a>
+
+        <ul class="nav navbar-nav navbar-right rwd_menu">
+          <li><a id="loginOut" href="#">登出</a></li>
+          <li><a id="joinUs" href="#">加入我們</a></li>
+          <li><a id="welcome" href="#">會員登入</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a class="menu_cotain no_img" href="../index/index.html"><img src="img/menu_icon.png" alt="">回到首頁</a></li>
+          <li><a class="menu_cotain" href="pollution_taipei.html"><img src="img/button_north.png" alt="">汽機車汙染</a></li>
+          <li><a class="menu_cotain" href="pollution_taichung.html"><img src="img/button_mid.png" alt="">火力發電廠</a></li>
+          <li><a class="menu_cotain" href="pollution_yunlin.html"><img src="img/button_mid.png" alt="">六輕工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung1.html"><img src="img/button_south.png" alt="">小港工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung2.html"><img src="img/button_south.png" alt="">仁武工業區</a></li>
+          <li id="joinUsRWD"><a class="menu_cotain no_img" href="../member_signup/member_signup.html"><img src="img/menu_icon.png" alt="">加入我們</a></li>
+          <li><a id="welcomeRWD" class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">會員登入</a></li>
+          <li id="loginOutRWD"><a class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">登出</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse navbar-pollution">
+        <a class="north" href="pollution_taipei.html">汽機車汙染</a>
+        <a class="mid" href="pollution_taichung.html">火力發電廠</a>
+        <a class="mid" href="pollution_yunlin.html">六輕工業區</a>
+        <a class="south" href="pollution_kaohsiung1.html">小港工業區</a>
+        <a class="south" href="pollution_kaohsiung2.html">仁武工業區</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <img class="main_img" src="img/pollution_taipei.png" alt="pollution_taipei">
+    <div class="article">
+      <div class="event_information">
+        <iframe class="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Fhc_ref%3DSEARCH&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1863859253879208" width="100px"
+          height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="no_like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Ffref%3Dts&width=104&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId=1863859253879208" width="104"
+          height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 事件名稱：交通工具汙染</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 事件地點：台北市中正區</p>
+        <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14632.624189272507!2d121.50831245608184!3d25.041896647857637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a8d497325%3A0x2876dc1b4d647f9!2z5Lit6I-v5rCR5ZyL57i957Wx5bqc!5e1!3m2!1szh-TW!2stw!4v1497984151326"
+          width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class="happen"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 事發狀況　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></p>
+        <div class="event_happen">
+          <p class="happen_text">
+          翻開台北市的空污地圖，或許更能按圖索驥。距離台大醫院不到五公里的古亭測站，過去十年的空氣污染指標（PSI）居台北市七大測站之冠，比周邊的中山、士林、松山和萬華站都高。
+          </p>
+          <p class="happen_text">
+          古亭站所涵蓋範圍，包括中正區和大安區，不僅有總統府、行政院等重要部會機關，更涵蓋台大、建中等知名學府，幾乎是全國菁英薈萃之地。
+          </p>
+          <p class="happen_text">
+          世界衛生組織（WHO）在十月中，將空氣污染列為主要環境致癌物，引發肺癌風險更勝二手菸。最危險的，是可堆積在人肺深處的細懸浮微粒ＰＭ2.5。
+          </p>
+          <img  class="img-thumbnail" src="img/taipei_img1.png">
+        </div><!-- event_happen -->
+        <p class="result"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 調查結果　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+        <div class="event_result">
+          <p class="result_text">
+            汽車廢氣中的氮氧化物，與雲層中的水分結合，會產生非常弱的消酸。這種酸會隨著雨水落到地面，就是酸雨。酸雨對植物和動物有害。二氧化碳是一種溫室氣體，它會將熱氣滯留在大氣層裡。如果滯留的熱氣太多，全球的溫度就會不斷上升。
+          </p>
+          <p class="result_text">
+            汽車、卡車及公車所使用的汽油與柴油，是一種複雜的碳氫化合物。當它們與引擎中的空氣混合，燃燒之後，會產生有害的氣體，及未完全燃燒的碳氫細微粒。車輛廢棄中所含的鉛也會散佈在空氣中。
+          </p>
+          <p class="result_text">
+            絕大多數的交通工具，都會污染空氣。車輛通常都已汽油和柴油為燃料。當這些燃料燃燒時，會將有害的氣體和蒸氣釋放到空氣中。柴油引擎比較能將燃料完全燃燒，也比汽油引擎省油。但是，這兩種燃料都會排放出又濃又黑的廢煙，嚴重污染空氣品質。
+          </p>
+        </div>
+      </div>
+      <!-- event_information -->
+    </div>
+    <!-- article -->
+  </div>
+  <!-- container -->
+
+  <footer>
+    <p> © copyright 2016 </p>
+    <div class="icon">
+      <a href="#"><img src="img/btn_fb.png"></a>
+      <a href="#"><img src="img/btn_tw.png"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

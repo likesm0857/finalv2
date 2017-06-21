@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>A2 ALARM | Pollution</title>
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <!-- jQuery/bootstrap -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body class="yunlin">
+  <img id="goTop" src="img/back_to_top.png" title="Back to Top" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 漢堡選單 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/LOGO.png" alt="A2 ALARM">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse rwd_background" id="bs-example-navbar-collapse-1">
+        <a href="#"><img class="nav-button button-left" src="img/button_north.png" alt="north"></a>
+        <a href="#"><img class="nav-button button-mid" src="img/button_mid.png" alt="mid"></a>
+        <a href="#"><img class="nav-button button-right" src="img/button_south.png" alt="south"></a>
+
+        <ul class="nav navbar-nav navbar-right rwd_menu">
+          <li><a id="loginOut" href="#">登出</a></li>
+          <li><a id="joinUs" href="#">加入我們</a></li>
+          <li><a id="welcome" href="#">會員登入</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a class="menu_cotain no_img" href="../index.html"><img src="img/menu_icon.png" alt="">回到首頁</a></li>
+          <li><a class="menu_cotain" href="pollution_taipei.html"><img src="img/button_north.png" alt="">汽機車汙染</a></li>
+          <li><a class="menu_cotain" href="pollution_taichung.html"><img src="img/button_mid.png" alt="">火力發電廠</a></li>
+          <li><a class="menu_cotain" href="pollution_yunlin.html"><img src="img/button_mid.png" alt="">六輕工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung1.html"><img src="img/button_south.png" alt="">小港工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung2.html"><img src="img/button_south.png" alt="">仁武工業區</a></li>
+          <li id="joinUsRWD"><a class="menu_cotain no_img" href="../member_signup/member_signup.html"><img src="img/menu_icon.png" alt="">加入我們</a></li>
+          <li><a id="welcomeRWD" class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">會員登入</a></li>
+          <li id="loginOutRWD"><a class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">登出</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse navbar-pollution">
+        <a class="north" href="pollution_taipei.html">汽機車汙染</a>
+        <a class="mid" href="pollution_taichung.html">火力發電廠</a>
+        <a class="mid" href="pollution_yunlin.html">六輕工業區</a>
+        <a class="south" href="pollution_kaohsiung1.html">小港工業區</a>
+        <a class="south" href="pollution_kaohsiung2.html">仁武工業區</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <img class="main_img" src="img/pollution_yunlin.png" alt="pollution_yunlin">
+    <div class="article">
+      <div class="event_information">
+        <iframe class="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Fhc_ref%3DSEARCH&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1863859253879208" width="100px"
+          height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="no_like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Ffref%3Dts&width=104&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId=1863859253879208" width="104"
+          height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 事件名稱：麥寮六輕空氣污染</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 事件地點：雲林縣麥寮鄉</p>
+        <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30455.72233150826!2d120.18617048529028!3d23.790370260355534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea85638ec5db5%3A0xf2995f5279b1ddd1!2z5Y-w5aGR5Yud6auY56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e1!3m2!1szh-TW!2stw!4v1497958902756"
+          width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class="happen"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 事發狀況　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></p>
+        <div class="event_happen">
+          <p class="happen_text">
+          相較起其他的台灣城市，空汙在雲林是一個截然不同的故事。境內的台塑六輕廠，帶動6千多億的投資，也帶來了年達14多萬噸的PM2.5排放，以及其他多種的污染物。今年1到9月，雲林空氣更是全台最髒。台大公衛學院副院長詹長權進一步以研究結果指出，「愈接近六輕的地方，癌症愈多！」
+          </p>
+          <img  class="img-thumbnail" src="img/yunlin_img1.png">
+          <p class="happen_text">
+          2009年，詹長權發表受雲林縣環保局委託調查的〈空氣污染對沿海地區環境及居民健康影響風險評估〉報告，就揭露了六輕對雲林人致命的污染真相，台塑六輕所在地麥寮及周遭台西鄉、東勢鄉和崙背鄉等地，在六輕1999年開始營運後，全癌症發生率就顯著增加，但是從報告發表迄今近6年來，官方毫無作為，「有什麼action？沒有！」
+          </p>
+          <p class="happen_text">
+          空污嚴重，就連農作物也受害。東勢鄉子弟吳松霖在3年多前返鄉，原本打算推廣在地農業，卻發現土壤與水質在六輕工業排放物長期污染下，早已變得不堪使用，而且只要一下雨，特別是不會迅速沖刷掉的小雨，和空氣中高濃度的SOx(硫氧化物)和NOx(氮氧化物)結合形成酸雨，讓高麗菜和蘿蔔長滿一個個黑點，西瓜田也整片爛掉，他一怒之下，改辦「自從六輕來了」電子報，帶居民認識環境污染議題。
+          </p>
+          <img  class="img-thumbnail" src="img/yunlin_img2.png">
+        </div><!-- event_happen -->
+        <p class="result"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 調查結果　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+        <div class="event_result">
+          <p class="result_text">
+            環保署副署長詹順貴表示，一月十八日將派專案小組到六輕稽查，一週內會有結果，一旦有應罰而未開罰情況，一定會辦到底，甚至不排除業者有惡意規避情事時，移送檢調處理。
+          </p>
+          <p class="result_text">
+            詹順貴也指出，長期來看地方環保局的確人力不足，會設法爭取補助，目前法令雖然容許校正，且規定有效數值得達八十五％，但若是假造理由校正，就算只有一筆也無法接受，將來會從系統改進，稽核每一筆校正，只要違規，就會自動跳出警示，環保局就要主動稽查。
+          </p>
+        </div>
+      </div>
+      <!-- event_information -->
+    </div>
+    <!-- article -->
+  </div>
+  <!-- container -->
+
+  <footer>
+    <p> © copyright 2016 </p>
+    <div class="icon">
+      <a href="#"><img src="img/btn_fb.png"></a>
+      <a href="#"><img src="img/btn_tw.png"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

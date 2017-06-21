@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>A2 ALARM | Pollution</title>
+
+  <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <!-- jQuery/bootstrap -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Custom JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+
+<body class="taichung">
+  <img id="goTop" src="img/back_to_top.png" title="Back to Top" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 漢堡選單 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img src="img/LOGO.png" alt="A2 ALARM">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse rwd_background" id="bs-example-navbar-collapse-1">
+        <a href="#"><img class="nav-button button-left" src="img/button_north.png" alt="north"></a>
+        <a href="#"><img class="nav-button button-mid" src="img/button_mid.png" alt="mid"></a>
+        <a href="#"><img class="nav-button button-right" src="img/button_south.png" alt="south"></a>
+
+        <ul class="nav navbar-nav navbar-right rwd_menu">
+          <li><a id="loginOut" href="#">登出</a></li>
+          <li><a id="joinUs" href="#">加入我們</a></li>
+          <li><a id="welcome" href="#">會員登入</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a class="menu_cotain no_img" href="../index.html"><img src="img/menu_icon.png" alt="">回到首頁</a></li>
+          <li><a class="menu_cotain" href="pollution_taipei.html"><img src="img/button_north.png" alt="">汽機車汙染</a></li>
+          <li><a class="menu_cotain" href="pollution_taichung.html"><img src="img/button_mid.png" alt="">火力發電廠</a></li>
+          <li><a class="menu_cotain" href="pollution_yunlin.html"><img src="img/button_mid.png" alt="">六輕工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung1.html"><img src="img/button_south.png" alt="">小港工業區</a></li>
+          <li><a class="menu_cotain" href="pollution_kaohsiung2.html"><img src="img/button_south.png" alt="">仁武工業區</a></li>
+          <li id="joinUsRWD"><a class="menu_cotain no_img" href="../member_signup/member_signup.html"><img src="img/menu_icon.png" alt="">加入我們</a></li>
+          <li><a id="welcomeRWD" class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">會員登入</a></li>
+          <li id="loginOutRWD"><a class="menu_cotain no_img" href="#"><img src="img/menu_icon.png" alt="">登出</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="collapse navbar-collapse navbar-pollution">
+        <a class="north" href="pollution_taipei.html">汽機車汙染</a>
+        <a class="mid" href="pollution_taichung.html">火力發電廠</a>
+        <a class="mid" href="pollution_yunlin.html">六輕工業區</a>
+        <a class="south" href="pollution_kaohsiung1.html">小港工業區</a>
+        <a class="south" href="pollution_kaohsiung2.html">仁武工業區</a>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <img class="main_img" src="img/pollution_taichung.png" alt="pollution_taichung">
+    <div class="article">
+      <div class="event_information">
+        <iframe class="like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Fhc_ref%3DSEARCH&width=100px&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1863859253879208" width="100px"
+          height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="no_like" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FntutcsieFB%2F%3Ffref%3Dts&width=104&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId=1863859253879208" width="104"
+          height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 事件名稱：火力發電廠燃煤汙染</p>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 事件地點：台中市龍井區</p>
+        <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30315.946211416594!2d120.48352510328071!3d24.219226386607062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693fd4f181f303%3A0x7e6c7fdbb9ce7fb8!2z5Y-w5Lit55m86Zu75bug!5e1!3m2!1szh-TW!2stw!4v1497987681769"
+          width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class="happen"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> 事發狀況　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></p>
+        <div class="event_happen">
+          <p class="happen_text">
+          位於台中港區的台中火力發電廠，擁有10部燃煤發電機，總發電量高達550萬仟瓦，是全世界最大的火力發電廠。為了扭轉民眾把火力發電廠和污染聯想在一起 的既有印象，發電廠全力打造綠色環境，在廠區內遍植樹木，還闢設休閒公園及園藝造景，景觀與一般的公園無異，吸引許多民眾前往參觀。
+          </p>
+          <p class="happen_text">
+          台中火力發電廠位於大肚溪出海口北側，廠區面積共281公頃，完全是抽取台中港計劃航道的砂填涘而成的新生地，是第一個經過環境評估核准後才興建的電廠， 於民國78年7月正式建廠發電。台中電廠為了樹立民眾優良印象，特地在廠內種植大量防風林抑制風砂飛揚，並興建廣大的休閒公園，還有漂亮的園藝造景，整個 綠地有56公頃，占廠區總面積的20％；5支高達250公尺的煙囪，除了投下鉅資裝設煤灰集塵器，減少煤灰從煙囪散出外，另又在外表漆上鮮豔活潑色彩，為 電廠增添不少生氣。因此，民眾進入發電廠都會被綠草如茵的景象所吸引。
+          </p>
+          <img  class="img-thumbnail" src="img/taichung_img1.jpg">
+          <p class="happen_text">
+          鄭仁和形容，中火占地277.5公頃，興建前原是汪洋一片，「漲潮是海、退潮後是沙灘」，只要東北季風或颱風外圍環流接近，工地現場就是飛砂走石，連路都走不了，員工只能戴著露出兩隻眼睛、彷彿「藏鏡人」般的面罩施工。
+          </p>
+          <p class="happen_text">
+          就燃煤發電廠的發電規模而言，美國有座發電廠原先位居世界之冠，在我國台中火力發電廠建妥第10部發電機之後，取代美國地位，躍居世界第一，稱霸全球。台 中電廠靠燃燒煤炭發電，排放的煤煙裡以煤灰及二氧化硫的含量最多，如果未做妥善處理就直接從煙囪排放出去，附近地區必定被燻染得烏煙瘴氣，且二氧化硫會造 成酸雨，動植物幾乎很難生存。
+          </p>
+          <img  class="img-thumbnail" src="img/taichung_img2.jpg">
+          <p class="happen_text">
+          由於風力發電成本，每度電要1.8元，而火力發電僅約1.1元，雖然風力發電的成本較高，可是每發一度的電卻能減少1公斤二氧化碳排放量，台電正朝風力發 電努力。遙望台中電廠，除了5根高聳的煙囪外，還有4台風力發電機，每台高度106公尺，有3支葉片；葉片轉速緩慢，每分鐘最多20轉，風速低於每秒3公 尺或高於25公尺，發電機就會自動停機，以維護機組安全。
+          </p>
+        </div><!-- event_happen -->
+        <p class="result"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 調查結果　<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+        <div class="event_result">
+          <p class="result_text">
+            中央、地方齊定新規，讓台中火力發電廠的處境更艱難。但中火占全台發電量近2成，改成天然氣成本翻倍，整體火力發電更提供全台約8成的電量，在減少空汙與穩定供電之間，要如何取得平衡，已成為台電與新政府的一大挑戰。
+          </p>
+          <p class="result_text">
+            環保署空保處長陳咸亨表示，經檢討決依空汙法的授權，預告訂定相關行政命令，讓天然氣電廠事先申請取得許可就得以滿載發電，不受空汙法取得固定汙染源操作許可證的限制，最快10月空汙季前上路。
+          </p>
+          <p class="result_text">
+            台中市長林佳龍指出，減碳是國際趨勢，市府努力這兩年已有成績，為市民健康會持續監督中火。他說，秋、冬是台灣用電的低峰期，台電只要做好規劃，並擬定電力調度方案，根本不會有機組停機及供電停擺的問題。
+          </p>
+        </div>
+      </div>
+      <!-- event_information -->
+    </div>
+    <!-- article -->
+  </div>
+  <!-- container -->
+
+  <footer>
+    <p> © copyright 2016 </p>
+    <div class="icon">
+      <a href="#"><img src="img/btn_fb.png"></a>
+      <a href="#"><img src="img/btn_tw.png"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
